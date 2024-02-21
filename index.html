@@ -6,6 +6,50 @@
   <title>TickFav</title>
 </head>
 <body>
-  
+  <div id="app">
+    <header>
+      <div class="logo">
+        <img src="./assets/logo-black.png" alt="Logo com um cifrão envolto por um círculo">
+        <span>TickFav</span>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Digite o ticker de um ativo">
+        <button>
+          <img src="./assets/star-light-border-white.svg" alt="Estrela sem preenchimento de contorno branco">
+          <span>Favoritar</span>
+        </button>
+        <i><img src="./assets/moon-black.svg" alt="Meia lua sem preenchimento com borda preta"></i>
+        <i><img src="./assets/star-light-border-white.svg" alt="Sol sem preenchimento com borda branca"></i>
+      </div>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Ativo</th>
+            <th>Ticker</th>
+            <th>Preço</th>
+            <th>Moeda</th>
+            <th>Máx - Min dia</th>
+            <th><img src="./assets/arrows-counter-clockwise-bold.svg" alt="Duas setas passando da metade de um círculo para o outro, seguindo a linha do círculo"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="company">
+              <img src="" alt="Logo da empresa Petrobras">
+              <p>Petróleo Brasileiro S.A. - Petrobras</p>
+              <span>Petrobras PN N2</span>
+            </td>
+            <td class="ticker">PETR4</td>
+            <td class="price">R$ 42,90</td>
+            <td class="currency">BRL</td>
+            <td class="max-min">R$ 43,90 - R$ 43,90</td>
+            <td><button>X</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
 </body>
 </html>
