@@ -1,0 +1,203 @@
+* {
+  padding: 9;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --primary-color: #262626;
+  --text-white: #E8E8E8;
+  --text-input: #A8A8A8;
+  --border: #C3C3C3;
+  --bg-input: #F1F1F1;
+  --bg-table-thead: #626262;
+  --bg-table-row-even: #CECECE;
+  --bg-table-row-odd: #A8A8A8;
+  --color-remove: #E70000;
+}
+
+body, input {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+i {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+#app {
+  max-width: 90rem;
+  margin: 11rem auto 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary-color);
+}
+
+.logo img {
+  width: 6rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.search button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border-radius: 5px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+}
+
+.search input {
+  padding: .35rem 1.5rem;
+  border: 2px solid var(--border);
+  width: 30rem;
+  border-radius: 5px;
+  font-weight: 500;
+  color: var(--primary-color);
+  background-color: var(--bg-input);
+}
+
+.search input::placeholder {
+  color: var(--text-input);
+}
+
+button img {
+  width: 2rem;
+}
+
+.icons img {
+  width: 3rem;
+}
+
+html.dark .moon,
+html:not(.dark) .sun{
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  text-align: left;
+}
+
+table * {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+thead th {
+  background-color: var(--bg-table-thead);
+  color: var(--text-white);
+  font-size: bold;
+  font-size: 1.8rem;
+  padding: 1.5rem 1.5rem;
+  border-top: 2px solid var(--border);
+}
+
+/* Centralizar uma img */
+thead th img {
+  width: 2.5rem;
+  margin: auto -3px;
+  display: block;
+  cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-table-row-even);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--bg-table-row-odd);
+}
+
+tbody td {
+  padding: 2rem 1.5rem;
+}
+
+tbody tr {
+  font-weight: bold;
+}
+
+tbody tr td:last-child button {
+  color: var(--color-remove);
+  font-weight: bold;
+}
+
+tbody .company {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+tbody .company img {
+  width: 4rem;
+  height: 4rem;
+}
+
+tbody .names span {
+  font-weight: 400;
+}
+
+/* Tables borders */
+
+thead th:first-child {
+  border-top-left-radius: 7px;
+  border-left: 2px solid var(--border);
+}
+
+thead th:last-child {
+  border-top-right-radius: 7px;
+  border-right: 2px solid var(--border);
+}
+
+tbody td:first-child {
+  border-left: 2px solid var(--border);
+}
+
+tbody td:last-child {
+  border-right: 2px solid var(--border);
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 7px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 7px;
+}
+
+tbody tr:last-child td {
+  border-bottom: 2px solid var(--border);
+}
