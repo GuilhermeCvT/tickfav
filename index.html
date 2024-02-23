@@ -9,22 +9,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <script src="./js/main.js" type="module" defer></script>
 </head>
 <body>
   <div id="app">
     <header>
       <div class="logo">
-        <img src="./assets/logo-black.png" alt="Logo com um cifrão envolto por um círculo">
+        <img id="logo-app" src="./assets/logo-black.png" alt="Logo com um cifrão envolto por um círculo">
         <span>TickFav</span>
       </div>
       <div class="search">
         <input type="text" placeholder="Digite o ticker de um ativo">
-        <button>
-          <img src="./assets/star-light-border-white.svg" alt="Estrela sem preenchimento de contorno branco">
+        <button id="favorite">
+          <img id="star-favorite" src="./assets/star-light-border-white.svg" alt="Estrela sem preenchimento de contorno branco">
           <span>Favoritar</span>
         </button>
-        <i class="moon icons"><img src="./assets/moon-black.svg" alt="Meia lua sem preenchimento com borda preta"></i>
-        <i class="sun icons"><img src="./assets/star-light-border-white.svg" alt="Sol sem preenchimento com borda branca"></i>
+        <button id="icons">
+          <i class="moon"><img src="./assets/moon-black.svg" alt="Meia lua sem preenchimento com borda preta"></i>
+          <i class="sun"><img src="./assets/sun-white.svg" alt="Sol sem preenchimento com borda branca"></i>
+        </button>
       </div>
     </header>
     <main>

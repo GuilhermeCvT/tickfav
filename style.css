@@ -9,13 +9,31 @@
 
   --primary-color: #262626;
   --text-white: #E8E8E8;
+  --text-favorite: #E8E8E8;
   --text-input: #A8A8A8;
   --border: #C3C3C3;
+  --bg-body: #FFFFFF;
   --bg-input: #F1F1F1;
   --bg-table-thead: #626262;
   --bg-table-row-even: #CECECE;
   --bg-table-row-odd: #A8A8A8;
   --color-remove: #E70000;
+}
+
+html.dark {
+  --primary-color: #E8E8E8;
+  --text-favorite: #262626;
+  --text-input: #262626;
+  --border: #7B7B7B;
+  --bg-body: #262626;
+  --bg-input: #C9C9C9;
+  --bg-table-thead: #101010;
+  --bg-table-row-even: #262626;
+  --bg-table-row-odd: #595959;
+}
+
+body {
+  background-color: var(--bg-body);
 }
 
 body, input {
@@ -67,13 +85,13 @@ header {
   gap: .8rem;
 }
 
-.search button {
+.search #favorite {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: .5rem 1.5rem;
   background-color: var(--primary-color);
-  color: var(--text-white);
+  color: var(--text-favorite);
   border-radius: 5px;
   font-family: "Roboto Mono", monospace;
   font-weight: bold;
@@ -85,7 +103,7 @@ header {
   width: 30rem;
   border-radius: 5px;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--text-input);
   background-color: var(--bg-input);
 }
 
@@ -97,7 +115,7 @@ button img {
   width: 2rem;
 }
 
-.icons img {
+#icons img {
   width: 3rem;
 }
 
