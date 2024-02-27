@@ -85,7 +85,7 @@ header {
   gap: .8rem;
 }
 
-.search #favorite {
+.search .favorite {
   display: flex;
   align-items: center;
   gap: 1rem;

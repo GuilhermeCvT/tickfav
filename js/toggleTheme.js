@@ -1,11 +1,11 @@
 const buttonTheme = document.getElementById('icons')
 const root = document.documentElement
 
-buttonTheme.addEventListener('click', () => {
+buttonTheme.onclick = () => {
   root.classList.toggle('dark')
 
   toggleImages()
-})
+}
 
 function toggleImages() {
   const logo = document.getElementById('logo-app')
