@@ -45,4 +45,17 @@ export class FavoritesData {
     this.updateView()
     this.save()
   }
+
+  async updateData() {
+    let updatedTickers = []
+
+    for (const entry of this.entries) {
+      updatedTickers.push(await tickSearch.search(entry.symbol))
+    }
+
+    this.entries = updatedTickers
+    this.save()
+    this.removeAllTr()
+    this.updateView()
+  }
 }

@@ -10,6 +10,7 @@ export class FavoritesView extends FavoritesData {
     this.removeAllTr()
     this.updateView()
     this.onAdd()
+    this.updatePrices()
   }
 
   removeAllTr() {
@@ -72,6 +73,14 @@ export class FavoritesView extends FavoritesData {
     addButton.onclick = () => {
       const { value } = this.root.querySelector('.search input')
       this.add(value)
+    }
+  }
+
+  updatePrices() {
+    const updatePriceButton = this.root.querySelector('#updatePrice')
+
+    updatePriceButton.onclick = () => {
+      this.updateData()
     }
   }
 }
