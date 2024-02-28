@@ -54,7 +54,7 @@ i {
 }
 
 #app {
-  max-width: 90rem;
+  max-width: 110rem;
   margin: 11rem auto 0;
 }
 
@@ -77,6 +77,14 @@ header {
 
 .logo img {
   width: 6rem;
+}
+
+.price {
+  width: 12rem;
+}
+
+.max-min {
+  width: 20rem;
 }
 
 .search {
