@@ -20,6 +20,8 @@ export class FavoritesView extends FavoritesData {
   }
 
   updateView() {
+    document.documentElement.classList.add('empty')
+
     this.entries.forEach(ticker => {
       const row = this.createRow()
       const marketRange = ticker.regularMarketDayRange.split('-')
@@ -42,6 +44,10 @@ export class FavoritesView extends FavoritesData {
 
       this.tbody.append(row)
     })
+
+    if (this.entries.length == 0){
+      document.documentElement.classList.remove('empty')
+    }
   }
 
   createRow() {

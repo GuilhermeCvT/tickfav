@@ -24,7 +24,7 @@ export class FavoritesData {
         throw new Error('Ticker já adicionado')
       
       const tickerData = await tickSearch.search(ticker)
-      if(tickerData.symbol === undefined)
+      if(tickerData.error == true)
         throw new Error('Ticker não encontrado')
 
       this.entries = [tickerData, ...this.entries]

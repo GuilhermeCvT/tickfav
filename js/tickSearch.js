@@ -9,15 +9,24 @@ export class tickSearch {
 
     return fetch(endpoint, requestInfo)
       .then(data => data.json())
-      .then((response) => {return response.results[0]})
-      .then(({currency, logourl, longName, regularMarketPrice, shortName, symbol, regularMarketDayRange}) => ({
+      .then((response) => 
+        {
+          if (response.error == true)
+            return response
+          
+          return response.results[0]
+        }
+      )
+      .then(({currency, logourl, longName, regularMarketPrice, shortName, symbol, regularMarketDayRange, error, message}) => ({
         currency,
         logourl,
         longName,
         regularMarketPrice,
         shortName,
         symbol,
-        regularMarketDayRange
+        regularMarketDayRange,
+        error,
+        message
       }))
   }
 }
